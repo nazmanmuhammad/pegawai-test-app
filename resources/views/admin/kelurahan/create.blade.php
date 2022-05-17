@@ -25,9 +25,11 @@
                     <div class="form-group">
                         <label for="example-text-input" class="form-control-label">Nama Kecamatan</label>
                         <select name="kecamatan_id" id="status" class="form-control">
-                            <option value="" readonly>-- Pilih Provinsi -- </option>
+                            <option value="" readonly>-- Pilih Kecamatan -- </option>
                             @foreach($data_kecamatan as $kecamatan)
+                            @if($kecamatan->status=="aktif")
                             <option value="{{$kecamatan->id}}">{{$kecamatan->nama_kecamatan}}</option>
+                            @endif
                             @endforeach
                         </select>
                     </div>

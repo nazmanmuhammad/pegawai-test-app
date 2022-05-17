@@ -49,7 +49,9 @@
                         <select name="kelurahan_id" id="status" class="form-control @error('kelurahan_id') is-invalid @enderror" placeholder="@error('kelurahan_id') {{$message}} @enderror">
                             <option value="" readonly>-- Pilih Provinsi -- </option>
                             @foreach($data_kelurahan as $kelurahan)
-                            <option value="{{$kelurahan->id}}">{{$kelurahan->nama_kelurahan}}</option>
+                              @if($kelurahan->status=="aktif")
+                              <option value="{{$kelurahan->id}}">{{$kelurahan->nama_kelurahan}}</option>
+                              @endif
                             @endforeach
                         </select>
                     </div>
@@ -58,7 +60,9 @@
                         <select name="provinsi_id" id="status" class="form-control @error('provinsi_id') is-invalid @enderror" placeholder="@error('provinsi_id') {{$message}} @enderror">
                             <option value="" readonly>-- Pilih Provinsi -- </option>
                             @foreach($data_provinsi as $provinsi)
+                            @if($provinsi->status=="aktif")
                             <option value="{{$provinsi->id}}">{{$provinsi->nama_provinsi}}</option>
+                            @endif
                             @endforeach
                         </select>
                     </div>
