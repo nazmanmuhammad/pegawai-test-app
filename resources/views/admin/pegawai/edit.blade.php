@@ -29,21 +29,21 @@
                     </div>
                     <div class="form-group">
                      <label for="example-text-input" class="form-control-label">Jenis Kelamin</label><br>
-                        <input type="radio" id="html" name="jenis_kelamin" value="pria">
+                        <input type="radio" id="html" name="jenis_kelamin" value="pria" {{$data_pegawai->jenis_kelamin == 'pria'? 'checked' : ''}}>
                         <label for="html">Pria</label><br>
-                        <input type="radio" id="css" name="jenis_kelamin" value="wanita">
+                        <input type="radio" id="css" name="jenis_kelamin" value="wanita" {{$data_pegawai->jenis_kelamin == 'wanita'? 'checked' : ''}}>
                         <label for="css">Wanita</label><br>
                     </div>
                     <div class="form-group">
-                     <label for="example-text-input" class="form-control-label">Jenis Kelamin</label><br>
-                        <input type="radio" id="html" name="agama" value="islam">
+                     <label for="example-text-input" class="form-control-label">Agama</label><br>
+                        <input type="radio" id="html" name="agama" value="islam" {{$data_pegawai->agama == 'islam'? 'checked' : ''}}>
                         <label for="html">Islam</label><br>
-                        <input type="radio" id="css" name="agama" value="kristen">
+                        <input type="radio" id="css" name="agama" value="kristen" {{$data_pegawai->agama == 'kristen'? 'checked' : ''}}>
                         <label for="css">Kristen</label><br>
                     </div>
                     <div class="form-group">
                         <label for="example-text-input" class="form-control-label">Alamat</label>
-                        <textarea type="text" name="alamat" class="form-control" value="{{$data_pegawai->alamat}}"></textarea>
+                        <textarea type="text" name="alamat" class="form-control" value="{{$data_pegawai->alamat}}">{{$data_pegawai->alamat}}</textarea>
                     </div>
                     <div class="form-group">
                         <label for="example-text-input" class="form-control-label">Nama Kelurahan</label>

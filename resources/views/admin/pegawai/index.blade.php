@@ -19,6 +19,7 @@
                                 <th>Nama Provinsi</th>
                                 <th>Tempat Lahir</th>
                                 <th>Tanggal Lahir</th>
+                                <th>Jenis Kelamin</th>
                                 <th>Agama</th>
                                 <th>Alamat</th>
                                 <th>Kelurahan</th>
@@ -35,6 +36,7 @@
                                 <td>{{ $pegawai->nama_pegawai }}</td>
                                 <td>{{ $pegawai->tempat_lahir}}</td>
                                 <td>{{ $pegawai->tanggal_lahir}}</td>
+                                <td>{{ $pegawai->jenis_kelamin}}</td>
                                 <td>{{ $pegawai->agama }}</td>
                                 <td>{{ $pegawai->alamat}}</td>
                                 <td>{{ $pegawai->kelurahan->nama_kelurahan}}</td>
