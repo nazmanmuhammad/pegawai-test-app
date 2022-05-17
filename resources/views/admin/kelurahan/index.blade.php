@@ -30,7 +30,11 @@
                                 <td>{{ $kelurahan->kode }}</td>
                                 <td>{{ $kelurahan->nama_kelurahan}}</td>
                                 <td>{{ $kelurahan->kecamatan->nama_kecamatan}}</td>
-                                <td>{{ $kelurahan->status }}</td>
+                                @if($kelurahan->status=='aktif')<td><div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck2" checked></td>
+                                @elseif($kelurahan->status=='tidak_aktif')<td><div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck2"></td>
+                                @endif
                                 <td><a href="{{ route('kelurahan.edit',[$kelurahan->id])}}" class="btn btn-warning btn-sm">Ubah</a>
                                 <form action="{{ route('kelurahan.destroy',[$kelurahan->id])}}" method="post">
                                   @csrf

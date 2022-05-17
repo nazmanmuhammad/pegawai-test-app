@@ -97,12 +97,12 @@ class KelurahanController extends Controller
         $this->validate($request,[
             'kode' => 'required',
             'nama_kelurahan' => 'required',
-            'nama_kecamatan' => 'required',
+            'kecamatan_id' => 'required',
             'status' => 'required'
         ],[
             'kode.required' => 'Kode tidak boleh dikosongkan!',
             'nama_kelurahan.required' => 'Nama Kelurahan tidak boleh dikosongkan!',
-            'nama_kecamatan.required' => 'Nama Kecamatan tidak boleh dikosongkan!',
+            'kecamatan_id.required' => 'Nama Kecamatan tidak boleh dikosongkan!',
             'status.required' => 'Status tidak boleh dikosongkan!'
         ]);
 
@@ -110,7 +110,7 @@ class KelurahanController extends Controller
         $data_kelurahan->update([
             'kode' => $request->get('kode'),
             'nama_kelurahan' => $request->get('nama_kelurahan'),
-            'nama_kecamatan' => $request->get('nama_kecamatan'),
+            'kecamatan_id' => $request->get('kecamatan_id'),
             'status' => $request->get('status')
         ]);
 

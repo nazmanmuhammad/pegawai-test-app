@@ -11,8 +11,9 @@
             <div class="card-body">
               <p class="text-uppercase text-sm">Kelurahan</p>
               <div class="row">
-                <form action="{{ route('kelurahan.store') }}" method="post">
+                <form action="{{ route('kelurahan.update',[$data_kelurahan->id]) }}" method="post">
                     @csrf
+                    @method('PUT')
                     <div class="col-md-6">
                     <div class="form-group">
                         <label for="example-text-input" class="form-control-label">Kode</label>
@@ -34,9 +35,9 @@
                     <div class="form-group">
                         <label for="example-text-input" class="form-control-label">Status</label>
                         <select name="status" id="status" class="form-control">
-                            <option value="{{ $data_kelurahan->status }}">{{ $data_kelurahan->status }}</option>
+                            <option value="{{ $data_kelurahan->status }}">selected: {{ $data_kelurahan->status }}</option>
                             <option value="aktif">Aktif</option>
-                            <option value="tidak aktif">Tidak Aktif</option>
+                            <option value="tidak_aktif">Tidak Aktif</option>
                         </select>
                     </div>
                  </div>
