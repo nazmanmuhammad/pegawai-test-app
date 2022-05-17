@@ -40,7 +40,7 @@
                                 <td>{{ $pegawai->agama }}</td>
                                 <td>{{ $pegawai->alamat}}</td>
                                 <td>{{ $pegawai->kelurahan->nama_kelurahan}}</td>
-                                <td>{{ $pegawai->kelurahan->kecamatan_id}}</td>
+                                <td>{{ $pegawai->kelurahan->kecamatan->nama_kecamatan}}</td>
                                 <td>{{ $pegawai->provinsi->nama_provinsi}}</td>
                                 <td>
                                     <a href="{{route('pegawai.edit',[$pegawai->id])}}" class="btn btn-warning btn-sm">Ubah</a>
