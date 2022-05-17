@@ -16,15 +16,15 @@
                     <div class="col-md-6">
                     <div class="form-group">
                         <label for="example-text-input" class="form-control-label">Nama Pegawai</label>
-                        <input class="form-control" type="text" name="nama_pegawai">
+                        <input class="form-control @error('nama_pegawai') is-invalid @enderror" type="text" name="nama_pegawai" placeholder="@error('nama_pegawai') {{$message}} @enderror">
                     </div>
                     <div class="form-group">
                         <label for="example-text-input" class="form-control-label">Tempat Lahir</label>
-                        <input class="form-control" type="text" name="tempat_lahir">
+                        <input class="form-control @error('tempat_lahir') is-invalid @enderror" type="text" name="tempat_lahir" placeholder="@error('tempat_lahir') {{$message}} @enderror">
                     </div>
                     <div class="form-group">
                         <label for="example-text-input" class="form-control-label">Tanggal Lahir</label>
-                        <input class="form-control" type="date" name="tanggal_lahir">
+                        <input class="form-control @error('tanggal_lahir') is-invalid @enderror" type="date" name="tanggal_lahir" placeholder="@error('tanggal_lahir') {{$message}} @enderror">
                     </div>
                     <div class="form-group">
                      <label for="example-text-input" class="form-control-label">Jenis Kelamin</label><br>
@@ -42,11 +42,11 @@
                     </div>
                     <div class="form-group">
                         <label for="example-text-input" class="form-control-label">Alamat</label>
-                        <textarea type="text" name="alamat" class="form-control"></textarea>
+                        <textarea type="text" name="alamat" class="form-control @error('alamat') is-invalid @enderror" placeholder="@error('alamat') {{$message}} @enderror"></textarea>
                     </div>
                     <div class="form-group">
                         <label for="example-text-input" class="form-control-label">Nama Kelurahan</label>
-                        <select name="kelurahan_id" id="status" class="form-control">
+                        <select name="kelurahan_id" id="status" class="form-control @error('kelurahan_id') is-invalid @enderror" placeholder="@error('kelurahan_id') {{$message}} @enderror">
                             <option value="" readonly>-- Pilih Provinsi -- </option>
                             @foreach($data_kelurahan as $kelurahan)
                             <option value="{{$kelurahan->id}}">{{$kelurahan->nama_kelurahan}}</option>
@@ -55,7 +55,7 @@
                     </div>
                     <div class="form-group">
                         <label for="example-text-input" class="form-control-label">Nama Provinsi</label>
-                        <select name="provinsi_id" id="status" class="form-control">
+                        <select name="provinsi_id" id="status" class="form-control @error('provinsi_id') is-invalid @enderror" placeholder="@error('provinsi_id') {{$message}} @enderror">
                             <option value="" readonly>-- Pilih Provinsi -- </option>
                             @foreach($data_provinsi as $provinsi)
                             <option value="{{$provinsi->id}}">{{$provinsi->nama_provinsi}}</option>
