@@ -29,7 +29,11 @@
                                 <td>{{ $i++ }}</td>
                                 <td>{{ $provinsi->kode }}</td>
                                 <td>{{ $provinsi->nama_provinsi}}</td>
-                                <td>{{ $provinsi->status }}</td>
+                                @if($provinsi->status=='aktif')<td><div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck2" checked></td>
+                                @elseif($provinsi->status=='tidak aktif')<td><div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck2"></td>
+                                @endif
                                 <td><a href="{{ route('provinsi.edit',[$provinsi->id]) }}" class="btn btn-warning">Edit</a>
                                     <form action="{{ route('provinsi.destroy',[$provinsi->id]) }}" method="post">
                                         {{ csrf_field()}}
