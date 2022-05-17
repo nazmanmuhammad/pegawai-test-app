@@ -30,9 +30,9 @@
                                 <td>{{ $kecamatan->kode }}</td>
                                 <td>{{ $kecamatan->nama_kecamatan}}</td>
                                 @if($kecamatan->status=='aktif')<td><div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="customCheck2" checked></td>
+                                <input type="checkbox" class="custom-control-input" id="customCheck2" checked disabled></td>
                                 @elseif($kecamatan->status=='tidak aktif')<td><div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="customCheck2"></td>
+                                <input type="checkbox" class="custom-control-input" id="customCheck2" disabled></td>
                                 @endif
                                 <td><a href="{{ route('kecamatan.edit',[$kecamatan->id]) }}" class="btn btn-warning">Edit</a>
                                     <form action="{{ route('kecamatan.destroy',[$kecamatan->id]) }}" method="post">
